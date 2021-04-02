@@ -1,12 +1,12 @@
 import React from 'react';
-import nasa from './API Calls/nasa';
 import './App.css';
 
 function App() {
-  return (
-    <div>app{nasa.data}
-    </div>
-  );
+return (
+  <div>
+    <img src={photo.photos[0].img_src} alt="mars"></img>
+  </div>
+);
 }
 
 export default App;
