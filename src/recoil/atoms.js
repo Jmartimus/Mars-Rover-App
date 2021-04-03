@@ -8,3 +8,10 @@ export const photoDateState = atom({
     day: ''
   },
 });
+
+export const photo = atom({
+  key: 'photo',
+  default: {
+    src: ''
+  }
+});
