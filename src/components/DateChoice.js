@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { photoDateState} from '../recoil/atoms';
-import { useRecoilState } from 'recoil';
+import { useSetRecoilState } from 'recoil';
 
 export const DateChoice = () => {
-  const [photoDate, setPhotoDate] = useRecoilState(photoDateState);
+  const setPhotoDate = useSetRecoilState(photoDateState);
   const [date, setDate] = useState({
       year: '',
       month: '',
@@ -15,6 +15,7 @@ export const DateChoice = () => {
       month: date.month,
       day: date.day
     });
+    // console.log(photoDateState)
   }
   return (
     <div>

@@ -12,6 +12,6 @@ export const photoDateState = atom({
 export const photo = atom({
   key: 'photo',
   default: {
-    src: ''
+    picArray: []
   }
 });
