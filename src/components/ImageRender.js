@@ -1,19 +1,18 @@
-import React, {useState} from 'react';
+import React from 'react';
 import { photo } from '../recoil/atoms';
 import { useRecoilValue } from 'recoil';
 import { Nasa } from '../apis/nasa';
+import './ImageRender.css'
 
 export const ImageRender = () => {
   Nasa();
   const marsPhoto = useRecoilValue(photo);
-  console.log({ marsPhoto });
-  if (marsPhoto) {
-    return <div>loading...</div>;
-  } else {
     return (
-      <div>{marsPhoto.picArray.photos.map((pics) => {
-        <img src={marsPhoto.picArray.photos.img_src} alt="mars"></img>;
-      })}</div>);
+      <div id="picContainer">
+        {marsPhoto.picArray.photos
+          ? marsPhoto.picArray.photos.map(pics => {
+            return <img id="pics" src={pics.img_src} alt="mars" key={pics.id}></img>;
+          })
+        : "Choose a date..."}
+      </div>);
   }
-}
-

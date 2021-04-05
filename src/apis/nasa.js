@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import { photoDateState, photo} from '../recoil/atoms';
 import { useRecoilValue, useSetRecoilState } from 'recoil';
 
@@ -19,7 +19,6 @@ export const Nasa = () => {
         setCurrentPhoto({
           picArray: res.data
         })
-        // setCurrentPhoto(res.data);
       });
   },[chosenDate, setCurrentPhoto]);
 };

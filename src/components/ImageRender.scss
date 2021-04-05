@@ -1,0 +1,13 @@
+#picContainer {
+  display: flex;
+  width: 400px;
+  height: 400px;
+  background-color: white;
+}
+#pics {
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100px;
+  height: 100px;
+}
