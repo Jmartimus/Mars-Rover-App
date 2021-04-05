@@ -15,7 +15,6 @@ export const DateChoice = () => {
       month: date.month,
       day: date.day
     });
-    // console.log(photoDateState)
   }
   return (
     <div>
