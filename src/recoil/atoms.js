@@ -15,3 +15,10 @@ export const photo = atom({
     picArray: []
   }
 });
+
+export const loading = atom({
+  key: 'loading',
+  default: {
+    loading: false
+  }
+})

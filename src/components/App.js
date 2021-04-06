@@ -8,6 +8,7 @@ return (
   <div id="background">
     <DateChoice />
     <ImageRender />
+    <label for="cars">Choose a car:</label>
   </div>
 );
 }
