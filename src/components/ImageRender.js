@@ -10,18 +10,25 @@ export const ImageRender = () => {
   const currentlyLoading = useRecoilValue(loading);
   const marsPhoto = useRecoilValue(photo);
   const [currentPage, setCurrentPage] = useState(1);
-  const [postsPerPage, setPostsPerPage] = useState(10);
+  const [picsPerPage, setPicsPerPage] = useState(10);
  
-// 9:23 on pagination video, figure out how to fix spinner
+// 13:50 on pagination video => totalposts?, figure out how to fix spinner
 
+  const indexOfLastPic = currentPage * picsPerPage;
+  const indexOfFirstPic = indexOfLastPic - picsPerPage;
+  const currentPics = marsPhoto.picArray.photos ? marsPhoto.picArray.photos.slice(indexOfFirstPic, indexOfLastPic) : '';
+  const pageNumbers = [];
+
+  for (let i = 1; i <= Math.ceil(totalPosts / picsPerPage); i++) {
+    pageNumbers.push(i);
+  }
+  
   return (
     <div id="picContainer">
-      {/* <Spinner /> */}
-        {marsPhoto.picArray.photos
-  ? marsPhoto.picArray.photos.map(pics => {
-    return<img id="pics" src={pics.img_src} alt="mars" key={pics.id}></img>;})
+        {currentPics
+  ? currentPics.map(currentPics => {
+    return<div><img id="pics" src={currentPics.img_src} alt="mars" key={currentPics.id}></img></div>;})
           : ''}
-        
       </div>);
 }
 
