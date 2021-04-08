@@ -15,5 +15,16 @@ body {
   -o-background-size: cover;
   background-size: cover;
   background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#background {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 

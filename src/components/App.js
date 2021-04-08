@@ -8,9 +8,13 @@ return (
   <div id="background">
     <DateChoice />
     <ImageRender />
-    <label for="cars">Choose a car:</label>
   </div>
 );
 }
 
 export default App;
+
+
+//add a spinner on load
+//a message if no pics are found
+//change css of calendar

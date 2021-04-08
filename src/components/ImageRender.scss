@@ -1,13 +1,18 @@
-#picContainer {
+#container {
   display: flex;
-  width: 400px;
-  height: 400px;
-  background-color: white;
+  width: 375px;
+  height: 375px;
+  background-color: whitesmoke;
+  flex-wrap: wrap;
 }
 #pics {
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  width: 100px;
-  height: 100px;
+  width: 125px;
+  height: 125px;
+}
+#pagination {
+  
+  color: white;
+  margin: 30px;
 }

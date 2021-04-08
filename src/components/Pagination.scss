@@ -1,0 +1,25 @@
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px;
+}
+
+.page-item {
+  list-style-type: none;
+  margin-bottom: 2px;
+}
+.page-link {
+  color: black;
+  background: white;
+  border: 1px solid black;
+  padding:2px;
+  font-size: 14px;
+  
+  &:active {
+    color:#E5CA88;
+  }
+  &:hover {
+    color:#E5CA88;
+    border: 2px solid #E5CA88;
+  }
+}

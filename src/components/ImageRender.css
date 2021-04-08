@@ -1,10 +1,12 @@
-#picContainer {
+#container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 400px;
-  height: 400px;
-  background-color: white;
+  width: 375px;
+  height: 375px;
+  background-color: whitesmoke;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 #pics {
@@ -14,9 +16,12 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  width: 100px;
-  height: 100px;
+  width: 125px;
+  height: 125px;
+}
+
+#pagination {
+  color: white;
+  margin: 30px;
 }
 /*# sourceMappingURL=ImageRender.css.map */

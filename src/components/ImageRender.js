@@ -1,36 +1,44 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { photo, loading } from '../recoil/atoms';
 import { useRecoilValue } from 'recoil';
 import { Spinner } from './Spinner';
-import { Nasa } from '../apis/nasa';
+import { Pagination } from './Pagination';
+import { useNasa } from '../apis/useNasa';
 import './ImageRender.css';
 
 export const ImageRender = () => {
-  Nasa();
+  useNasa();
   const currentlyLoading = useRecoilValue(loading);
   const marsPhoto = useRecoilValue(photo);
   const [currentPage, setCurrentPage] = useState(1);
-  const [picsPerPage, setPicsPerPage] = useState(10);
- 
-// 13:50 on pagination video => totalposts?, figure out how to fix spinner
-
+  const [picsPerPage] = useState(9);
   const indexOfLastPic = currentPage * picsPerPage;
   const indexOfFirstPic = indexOfLastPic - picsPerPage;
-  const currentPics = marsPhoto.picArray.photos ? marsPhoto.picArray.photos.slice(indexOfFirstPic, indexOfLastPic) : '';
-  const pageNumbers = [];
-
-  for (let i = 1; i <= Math.ceil(totalPosts / picsPerPage); i++) {
-    pageNumbers.push(i);
-  }
+  const currentPics = marsPhoto.picArray.photos
+    ? marsPhoto.picArray.photos.slice(indexOfFirstPic, indexOfLastPic)
+    : '';
+  const totalPics = marsPhoto.picArray.photos ? marsPhoto.picArray.photos.length : '';
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
   
+
   return (
-    <div id="picContainer">
-        {currentPics
-  ? currentPics.map(currentPics => {
-    return<div><img id="pics" src={currentPics.img_src} alt="mars" key={currentPics.id}></img></div>;})
-          : ''}
-      </div>);
-}
+    <div id="container">
+      {currentPics
+        ? currentPics.map((currentPics) => {
+          return (
+            <img
+                  id="pics"
+                  src={currentPics.img_src}
+                  alt="mars"
+                  key={currentPics.id}
+              ></img>
+            );
+          })
+        : ''}
+      <Pagination picsPerPage={picsPerPage} totalPics={totalPics} paginate={paginate}/>
+    </div>
+  );
+};
 
 // {marsPhoto.picArray.photos
 //   ? marsPhoto.picArray.photos.map(pics => {
