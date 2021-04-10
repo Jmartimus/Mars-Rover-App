@@ -15,6 +15,12 @@ return (
 export default App;
 
 
+//finish changing css of calendar - muted numbers and brighter text?
+
 //add a spinner on load
 //a message if no pics are found
-//change css of calendar
+//convert to typescript
+//utilize scss with variables
+//find a way to grow pictures onClick
+//run tests?
+//reorganize files into directories ImageRender/index.js, ImageRender/index.scss.

@@ -20,6 +20,10 @@
   height: 125px;
 }
 
+#pics:hover {
+  opacity: 0.5;
+}
+
 #pagination {
   color: white;
   margin: 30px;

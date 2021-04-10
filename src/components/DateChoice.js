@@ -25,7 +25,7 @@ export const DateChoice = () => {
         showMonthDropdown
         showYearDropdown
         showDisabledMonthNavigation
-        className='react-datepicker__today-button react-datepicker__header react-datepicker react-datepicker__day--selected'
+        className='react-datepicker-wrapper react-datepicker'
       />
     </div>
   );
