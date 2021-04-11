@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { photoDateState } from '../recoil/atoms';
+import { photoDateState } from '../../recoil/atoms';
 import { useSetRecoilState } from 'recoil';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
-import './DateChoice.css';
+import './Index.css';
 
 export const DateChoice = () => {
   const setPhotoDate = useSetRecoilState(photoDateState);

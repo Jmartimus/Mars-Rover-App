@@ -1,28 +1,28 @@
+@import '../../styleVariables/variables';
+
 .pagination {
+  height: auto;
   display: flex;
   flex-wrap: wrap;
-  height: 100px;
-  width: 375px;
   justify-content: center;
-  align-items: flex-start;
+  
 }
 
 .page-item {
-  list-style-type: none;
-  margin-bottom: 2px;
+  width:10px;
 }
 .page-link {
   color: black;
   background: white;
   border: 1px solid black;
-  padding:2px;
   font-size: 14px;
   
+  
   &:active {
-    color:#E5CA88;
+    color:$selected-color;
   }
   &:hover {
-    color:#E5CA88;
-    border: 2px solid #E5CA88;
+    color:$selected-color;
+    border: 2px solid $selected-color;
   }
 }

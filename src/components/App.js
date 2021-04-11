@@ -1,7 +1,8 @@
 import React from 'react';
 import './App.css';
-import { DateChoice } from './DateChoice';
-import { ImageRender } from './ImageRender';
+import { DateChoice } from './DateChoice/Index';
+import { ImageRender } from './ImageRender/Index';
+import { Spinner } from './Spinner/Index';
 
 function App() {
 return (
@@ -14,13 +15,10 @@ return (
 
 export default App;
 
-
-//finish changing css of calendar - muted numbers and brighter text?
-
+//finish css and layout of page
+//bug when clicking the first page in pagination
 //add a spinner on load
 //a message if no pics are found
 //convert to typescript
-//utilize scss with variables
 //find a way to grow pictures onClick
 //run tests?
-//reorganize files into directories ImageRender/index.js, ImageRender/index.scss.

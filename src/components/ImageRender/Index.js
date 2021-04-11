@@ -1,14 +1,12 @@
 import React, { useState } from 'react';
-import { photo, loading } from '../recoil/atoms';
+import { photo} from '../../recoil/atoms';
 import { useRecoilValue } from 'recoil';
-import { Spinner } from './Spinner';
-import { Pagination } from './Pagination';
-import { useNasa } from '../apis/useNasa';
-import './ImageRender.css';
+import { Pagination } from '../Pagination/Index.js';
+import { useNasa } from '../../apis/useNasa';
+import './Index.css';
 
 export const ImageRender = () => {
   useNasa();
-  const currentlyLoading = useRecoilValue(loading);
   const marsPhoto = useRecoilValue(photo);
   const [currentPage, setCurrentPage] = useState(1);
   const [picsPerPage] = useState(9);
@@ -30,9 +28,9 @@ export const ImageRender = () => {
               <img
                 id="pics"
                 src={currentPics.img_src}
-                alt="mars"
+                alt="Pictures on mars"
                 key={currentPics.id}
-              ></img>
+              />
             );
           })
         : ''}

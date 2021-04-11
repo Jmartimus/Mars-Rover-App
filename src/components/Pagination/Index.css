@@ -1,38 +1,32 @@
 .pagination {
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  height: 100px;
-  width: 375px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
 }
 
 .page-item {
-  list-style-type: none;
-  margin-bottom: 2px;
+  width: 10px;
 }
 
 .page-link {
   color: black;
   background: white;
   border: 1px solid black;
-  padding: 2px;
   font-size: 14px;
 }
 
 .page-link:active {
-  color: #E5CA88;
+  color: #EC7044;
 }
 
 .page-link:hover {
-  color: #E5CA88;
-  border: 2px solid #E5CA88;
+  color: #EC7044;
+  border: 2px solid #EC7044;
 }
-/*# sourceMappingURL=Pagination.css.map */
+/*# sourceMappingURL=Index.css.map */

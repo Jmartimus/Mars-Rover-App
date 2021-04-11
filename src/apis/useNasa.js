@@ -1,24 +1,17 @@
 import axios from 'axios';
-import { useState, useEffect } from 'react';
-import { photoDateState, photo} from '../recoil/atoms';
+import { useEffect } from 'react';
+import { photoDateState, photo, loading} from '../recoil/atoms';
 import { useRecoilValue, useSetRecoilState } from 'recoil';
 import {KEY} from '../key'
-import { Spinner } from '../components/Spinner';
 
 
 export const useNasa = () => {
-  const [loading, setLoading] = useState(false);
+  const setLoading = useSetRecoilState(loading);
   const setCurrentPhoto = useSetRecoilState(photo);
   const date = useRecoilValue(photoDateState);
   const chosenDate = date.chosenDate;
   const useKEY = KEY;
-  const spinning = () => {
-    if (loading === true) {
-      <Spinner />
-    }
-  }
 
-  //incorporate spinner in this custom hook.
 
   useEffect(() => {
     const fetchPics = async () => {
@@ -29,7 +22,6 @@ export const useNasa = () => {
       });
       setLoading(false);
     };
-    spinning();
     fetchPics();
 
   }, [chosenDate, setCurrentPhoto, setLoading, useKEY]);
