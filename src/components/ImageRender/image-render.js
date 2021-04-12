@@ -39,7 +39,7 @@ export const ImageRender = () => {
   return (
     <div id="container">
       {!currentPics
-        ? <p id="instructions">Pick a date above to see pictures of the Mars surface taken by a Rover on that day...</p> 
+        ? <p id="instructions">Pick a date above to see pictures of the Mars surface taken on that day...</p> 
         : currentPics.map((currentPics) => {
           return (
             <img
