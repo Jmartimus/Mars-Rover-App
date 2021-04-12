@@ -1,0 +1,43 @@
+@import '../../styleVariables/variables';
+#container {
+  display: flex;
+  width: 375px;
+  height: 375px;
+  flex-wrap: wrap;
+  border-radius: 10px;
+}
+#pics {
+  justify-content: center;
+  align-items: center;
+  width: 125px;
+  height: 125px;
+  &:hover {opacity: 0.5;}
+  border-radius: 10px;
+}
+#instructions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-family: $font-family-Poppins;
+  color: $text-color;
+  height: 80px;
+  padding-top: 20px;
+  text-shadow: 1px 1px 2px black, 0 0 1em white, 0 0 0.2em white;
+}
+#noPics {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-family: $font-family-Poppins;
+  color: $text-color;
+  height: 80px;
+  padding-top: 20px;
+  text-shadow: 1px 1px 2px black, 0 0 1em white, 0 0 0.2em white;
+}
+#pagination {
+  
+  color: white;
+  margin: 30px;
+}

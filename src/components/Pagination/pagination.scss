@@ -1,0 +1,24 @@
+@import '../../styleVariables/variables';
+
+#page_container {
+  display: flex;
+  flex-wrap: wrap;
+}
+#pageLinks {
+  border-radius: 10px;
+    color: $text-color;
+    background-color: black;
+    margin: 2px;
+  font-family: $font-family-Poppins;
+  width: 37px;
+  height: 40px;
+  text-align: center;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:hover {
+    background-color: white;
+  color: $selected-color;
+  }
+}

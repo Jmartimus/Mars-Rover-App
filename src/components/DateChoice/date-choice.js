@@ -3,7 +3,7 @@ import { photoDateState } from '../../recoil/atoms';
 import { useSetRecoilState } from 'recoil';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
-import './Index.css';
+import './date-choice.css';
 
 export const DateChoice = () => {
   const setPhotoDate = useSetRecoilState(photoDateState);
@@ -19,7 +19,7 @@ export const DateChoice = () => {
         selected={startDate}
         onChange={(date) => setStartDate(date)}
         isClearable
-        placeholderText="Enter a date!"
+        placeholderText="Pick a date!"
         minDate={new Date('2015-11-30')}
         maxDate={new Date()}
         showMonthDropdown

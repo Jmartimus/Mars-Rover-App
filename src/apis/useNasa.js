@@ -15,12 +15,12 @@ export const useNasa = () => {
 
   useEffect(() => {
     const fetchPics = async () => {
-      setLoading(true);
+      setLoading({ loading: true });
       const res = await axios.get(`https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=${chosenDate}&api_key=${useKEY}`);
+      setLoading({ loading: false });
       setCurrentPhoto({
         picArray: res.data
       });
-      setLoading(false);
     };
     fetchPics();
 
