@@ -1,4 +1,11 @@
 @import '../../styleVariables/variables';
+#biggerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 #container {
   display: flex;
   width: 375px;
@@ -11,8 +18,9 @@
   align-items: center;
   width: 125px;
   height: 125px;
-  &:hover {opacity: 0.5;}
   border-radius: 10px;
+  &:hover {opacity: 0.5;
+  }
 }
 #instructions {
   display: flex;
@@ -35,9 +43,26 @@
   height: 80px;
   padding-top: 20px;
   text-shadow: 1px 1px 2px black, 0 0 1em white, 0 0 0.2em white;
+ 
 }
 #pagination {
   
   color: white;
   margin: 30px;
+}
+
+#resetBtn {
+ font-family: $font-family-Poppins;
+  font-size: 12px;
+  background-color: $text-color;
+  color:$background-color;
+  border: none;
+  border-radius: 0.3rem;
+  margin-top: 60px;
+  height: 28px;
+  width: 150px;
+  &:hover {
+    background-color: $selected-color;
+    color: white;
+  }
 }

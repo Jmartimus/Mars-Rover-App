@@ -15,10 +15,10 @@ return (
 
 export default App;
 
-//reset button?
+//finish reset button css and stuff
+//figure out "..." button
 //finish css and layout of page
-//bug when clicking the first page in pagination
 //add a spinner on load
-//convert to typescript
 //find a way to grow pictures onClick
+//convert to typescript
 //run tests?

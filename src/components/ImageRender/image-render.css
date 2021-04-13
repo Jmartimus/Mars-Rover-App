@@ -1,3 +1,19 @@
+#biggerContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 #container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -64,5 +80,22 @@
 #pagination {
   color: white;
   margin: 30px;
+}
+
+#resetBtn {
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  background-color: #ececec;
+  color: black;
+  border: none;
+  border-radius: 0.3rem;
+  margin-top: 60px;
+  height: 28px;
+  width: 150px;
+}
+
+#resetBtn:hover {
+  background-color: #EC7044;
+  color: white;
 }
 /*# sourceMappingURL=image-render.css.map */
