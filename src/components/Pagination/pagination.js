@@ -18,12 +18,12 @@ export const Pagination = ({ picsPerPage, totalPics, paginate }) => {
   return (
         <div id="page_container">
           {pageNumbers.slice(0,8).map((number) => (
-              <a key={number} onClick={() => paginate(number)}href="!#" id="pageLinks1-8">
+              <a key={number} onClick={() => paginate(number)} href='#!' id="pageLinks1-8">
                 {number}
               </a>
           ))}
       {pageNumbers.length > 8 ? <div id="dropdown"><button className= "dropmenu" id="dropbtn">...</button><div className="dropdown-content">{pageNumbers.slice(8).map((number) => (
-        <a key={number} onClick={() => paginate(number)} href="!#" id="pageLinks9-" className="extraPages">
+        <a key={number} onClick={() => paginate(number)} href="#!" id="pageLinks9-" className="extraPages">
           {number}
         </a>
       ))}</div></div> : ''}
