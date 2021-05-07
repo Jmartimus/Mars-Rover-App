@@ -1,71 +1,13 @@
-# Getting Started with Create React App
+Welcome to the MarsRoverApp!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project calls the mars rover api at Nasa to load pictures of the Mars surface based on your date input. 
 
-## Available Scripts
+The MarsRoverApp was really fun to work on because it utilizes many technologies that I was able to learn and review. I will explain the route that this app takes and then give a little more information about the different technologies used.
 
-In the project directory, you can run:
+1. Using react-datepicker, the user is able to pick any date from the beginning date of the library of photos until today.  Access is restricted for dates before pictures were taken and for days after today (since those pics haven't been taken yet).
+2. Once a date is set, it is converted into the correct format within the date-choice component and assigned to a piece of global state that uses Recoil.js.
+3. The photoDateState atom (recoil jargon for the piece of state that carries information from component to component) carries the information to the useNasa hook. This is a custom hook that calls the Nasa Api using an API key and the date that was set.  The useNasa hook then sets another atom ('photo') with the freshly called pictures and sends all this over to the image-render component.
+4. In the image-render component the pictures are recieved and displayed.  If there are several pictures, the pictures are paginated so that the user can pick the page they want to look at and view pictures from there.
+5. Lastly, this whole app can be reset using the 'reset' button which brings the app back to the beginning.
 
-### `yarn start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# Mars-Rover-App
+This app was built for fun and also for learning, I enjoyed working on it and plan to continue building projects like this.  I hope you enjoy the MarsRoverApp.

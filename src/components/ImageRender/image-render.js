@@ -35,6 +35,12 @@ export const ImageRender = () => {
       picArray: []
     });
   }
+  const expandPic = (element) => {
+    if (currentPics) {
+      document.getElementById("img01").src = element.src;
+      document.getElementById("modal01").style.display = "block";
+    }
+  }
   
   // console.log(currentlyLoading.loading);
   // const loadingSpin = () => {
@@ -51,10 +57,11 @@ export const ImageRender = () => {
         : currentPics.map((currentPics) => {
           return (
             <img
-              id="pics"
+              id='pics'
               src={currentPics.img_src}
               alt="Pictures on mars"
               key={currentPics.id}
+              onclick={expandPic(this)}
             />
           );
         })}

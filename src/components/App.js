@@ -20,5 +20,4 @@ export default App;
 //finish css and layout of page
 //add a spinner on load
 //find a way to grow pictures onClick
-//convert to typescript
 //run tests?
