@@ -1,5 +1,5 @@
 import React from 'react';
-import './pagination.css';
+import './pagination.scss';
 
 export const Pagination = ({ picsPerPage, totalPics, paginate }) => {
   const pageNumbers = [];

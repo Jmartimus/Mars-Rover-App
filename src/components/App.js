@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
 import { DateChoice } from './DateChoice/date-choice';
 import { ImageRender } from './ImageRender/image-render';
 

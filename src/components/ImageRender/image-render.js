@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
-import { photo, loading } from '../../recoil/atoms';
+import { photo } from '../../recoil/atoms';
 import { useRecoilValue, useSetRecoilState } from 'recoil';
 import { Pagination } from '../Pagination/pagination.js';
-import { Spinner } from '../Spinner/spinner';
+// import { Spinner } from '../Spinner/spinner';
 import { useNasa } from '../../apis/useNasa';
-import './image-render.css';
+import './image-render.scss';
 
 export const ImageRender = () => {
   useNasa();
-  const currentlyLoading = useRecoilValue(loading);
+  // const currentlyLoading = useRecoilValue(loading);
   const marsPhoto = useRecoilValue(photo);
   const setResetComponent = useSetRecoilState(photo);
   const [currentPage, setCurrentPage] = useState(1);
@@ -35,12 +35,12 @@ export const ImageRender = () => {
       picArray: []
     });
   }
-  const expandPic = (element) => {
-    if (currentPics) {
-      document.getElementById("img01").src = element.src;
-      document.getElementById("modal01").style.display = "block";
-    }
-  }
+  // const expandPic = (element) => {
+  //   if (currentPics) {
+  //     document.getElementById("img01").src = element.src;
+  //     document.getElementById("modal01").style.display = "block";
+  //   }
+  // }
   
   // console.log(currentlyLoading.loading);
   // const loadingSpin = () => {
@@ -61,7 +61,7 @@ export const ImageRender = () => {
               src={currentPics.img_src}
               alt="Pictures on mars"
               key={currentPics.id}
-              onclick={expandPic(this)}
+              // onclick={expandPic(this)}
             />
           );
         })}

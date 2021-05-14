@@ -31,6 +31,7 @@ $datepicker__triangle-size: 8px !default;
   display: inline-block;
   position: relative;
   margin-left: 5px;
+  overflow: hidden;
 }
 
 .react-datepicker__header {
