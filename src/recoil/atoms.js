@@ -1,22 +1,29 @@
 import { atom } from 'recoil';
 
 export const photoDateState = atom({
-  key: 'userInfoState',
+  key: 'photoDateState',
   default: {
-    chosenDate: ''
-  }
+    chosenDate: '',
+  },
 });
 
 export const photo = atom({
   key: 'photo',
   default: {
-    picArray: []
-  }
+    picArray: [],
+  },
 });
 
 export const loading = atom({
   key: 'loading',
   default: {
-    loading: false
-  }
-})
+    loading: false,
+  },
+});
+
+export const resetDate = atom({
+  key: 'resetDate',
+  default: {
+    reset: false,
+  },
+});

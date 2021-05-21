@@ -8,8 +8,8 @@
 
 #container {
   display: flex;
-  width: 375px;
-  height: 375px;
+  width: 450px;
+  height: 450px;
   flex-wrap: wrap;
   border-radius: 10px;
 }
@@ -25,6 +25,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
   font-size: 16px;
   font-family: $font-family-Poppins;
   color: $text-color;
@@ -45,23 +46,6 @@
  
 }
 #pagination {
-  
-  color: white;
-  margin: 30px;
 }
 
-#resetBtn {
- font-family: $font-family-Poppins;
-  font-size: 12px;
-  background-color: $text-color;
-  color:$background-color;
-  border: none;
-  border-radius: 0.3rem;
-  margin-top: 50px;
-  height: 28px;
-  width: 150px;
-  &:hover {
-    background-color: $selected-color;
-    color: white;
-  }
-}
+

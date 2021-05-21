@@ -1,0 +1,10 @@
+@import '../../styleVariables/variables';
+#resetBtn {
+   &:hover {
+     background-color: black;
+     color: white;
+   }
+   &:active {
+    background-color: white;
+   }
+ }
