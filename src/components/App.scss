@@ -6,7 +6,6 @@
   padding: 0;
 }
 
-html,
 #background {
   height: 100vh;
   width: 100vw;
@@ -24,26 +23,27 @@ html,
   @media only screen and (min-width: $responsive) {
     background-size: 500%;
     background-repeat: no-repeat;
-    
-      }
-  @media only screen and (orientation: landscape) and (min-width: $phone) and (max-width: $phoneLandscape) {
-    background-size: 200%;
-    height: 300px;
+  }
+  @media only screen and (min-width: $desktop) {
+    background-size: 140%;
     background-repeat: no-repeat;
-    
-      }
-      @media only screen and (min-width: $desktop) {
-        background-size: 140%;
-        background-repeat: no-repeat;
-        
-          }
+  }
 }
 
-      #container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        @media only screen and (orientation: landscape) and (min-width: $phone) and (max-width: $phoneLandscape) {
-          margin-top: 200px;
-            }}
+#container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(36, 36, 36, 0.5);
+  border-radius: 4px;
 
+  @media only screen and (min-width: $responsive) {
+    width: 300px;
+    height: 600px;
+  }
+
+  @media only screen and (min-width: $phone) {
+    width: 600px;
+    height: 600px;
+  }
+}

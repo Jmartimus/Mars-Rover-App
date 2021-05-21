@@ -21,10 +21,8 @@ export const Reset = () => {
     });
   };
   return (
-    <div>
-      <Button id="resetBtn" onClick={() => resetApp()} variant="outlined">
-        Reset
-      </Button>
-    </div>
+    <Button id="resetBtn" onClick={() => resetApp()} variant="outlined">
+      Reset
+    </Button>
   );
 };

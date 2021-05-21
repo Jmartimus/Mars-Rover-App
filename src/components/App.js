@@ -16,9 +16,6 @@ function App() {
 
 export default App;
 
-//finish reset button css and stuff
-//figure out "..." button
-//finish css and layout of page
 //add a spinner on load
-//find a way to grow pictures onClick
-//run tests?
+//fix reset button bug that doesn't allow the date to appear after button is pressed.
+//landscape mode :)

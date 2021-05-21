@@ -1,38 +1,68 @@
 @import '../../styleVariables/variables';
-#biggerContainer {
+#imgOutputContainer {
+  width: 430px;
+  height: 400px;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
-}
+  align-items: center;
+  // @media only screen and (min-width: $responsive) {
+  //   height: 800px;
+  // }
+  }
 
-#container {
+#imgContainer {
   display: flex;
-  width: 450px;
-  height: 450px;
   flex-wrap: wrap;
-  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  @media only screen and (min-width: $responsive) {
+    width: 300px;
+    margin-top: 40px;
+  }
+  @media only screen and (min-width: $tablet) {
+    width: 500px;
+    margin-top: 0px;
+  }
 }
 #pics {
-  justify-content: center;
-  align-items: center;
-  width: 125px;
-  height: 125px;
-  &:hover {opacity: 0.5;
+  margin: 3px;
+  border-radius: 4px;
+  &:hover {opacity: 0.6;
+  }
+  @media only screen and (min-width: $responsive) {
+    width: 65px;
+    height: 65px;
+  }
+  @media only screen and (min-width: $tablet) {
+    width: 100px;
+    height: 100px;
   }
 }
 #instructions {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   text-align: center;
   font-size: 16px;
   font-family: $font-family-Poppins;
   color: $text-color;
   height: 80px;
-  padding-top: 20px;
   text-shadow: 1px 1px 2px black, 0 0 1em white, 0 0 0.2em white;
+  @media only screen and (min-width: $responsive) {
+    width: 300px;
+    margin-top: 200px;
+  }
+  @media only screen and (min-width: $tablet) {
+    font-size: 20px;
+    width: 400px;
+    margin-top: 50px;
+  }
+  // @media only screen and (orientation: landscape) and (min-width: $phone) {
+  //   width: 600px;
+  //   height: 300px;
+  // }
+  // @media only screen and (min-width: $phone) {
+  //   width: 450px;}
 }
+
+
 #noPics {
   display: flex;
   align-items: center;
@@ -43,9 +73,63 @@
   height: 80px;
   padding-top: 20px;
   text-shadow: 1px 1px 2px black, 0 0 1em white, 0 0 0.2em white;
- 
+  @media only screen and (min-width: $responsive) {
+    width: 300px;
+    text-align: center;
+    margin-top: 80px;
+  }
+  @media only screen and (min-width: $tablet) {
+    font-size: 20px;
+    width: 400px;
+    margin-top: 50px;
+  }
 }
-#pagination {
+
+#paginationContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  @media only screen and (min-width: $responsive) {
+    width: 300px;
+  }
+  @media only screen and (min-width: $tablet) {
+    width: 500px;
+  }
+}
+
+.MuiPaginationItem-textSecondary.Mui-selected {
+  color: #fff !important;
+  background-color: #EC7044 !important;
+  border-style: none !important;
+}
+.MuiPaginationItem-root {
+  color: white !important;
+&:hover {
+  background-color: rgba(255, 255, 255, 0.8) !important;
+  color: black !important;
+}
+}
+
+#modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#modalPic {
+    border-radius: 4px;
+  @media only screen and (min-width: $responsive) {
+    width: 400px;
+    height: 400px;
+  }
+  @media only screen and (min-width: $tablet) {
+    height:700px;
+    width:700px;
+  }
+}
+#resetBtnContainer{
+display: flex;
+justify-content: center;
+margin-top: 10px;
 }
 
 

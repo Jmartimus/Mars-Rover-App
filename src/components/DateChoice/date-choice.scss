@@ -7,4 +7,10 @@
   text-shadow: 1px 1px 2px black, 0 0 0em white, 0 0 0.2em white;
   font-size: 24px;
   border-radius: 20px;
+  @media only screen and (min-width: $responsive) {
+    font-size: 30px;
+  }
+  @media only screen and (min-width: $tablet) {
+    font-size: 30px;
+  }
 }

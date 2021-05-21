@@ -13,7 +13,6 @@ export const DateChoice = () => {
   const setPhotoDate = useSetRecoilState(photoDateState);
   const dateResetter = useRecoilValue(resetDate);
   const [selectedDate, setSelectedDate] = useState('');
-  const label = useState('Click here...');
   const setResetDateValue = useSetRecoilState(resetDate);
   const defaultMaterialTheme = createMuiTheme({
     palette: {
