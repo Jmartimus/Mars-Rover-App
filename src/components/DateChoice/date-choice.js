@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { photoDateState, resetDate } from '../../recoil/atoms';
-import { useSetRecoilState, useRecoilValue } from 'recoil';
-import { MuiPickersUtilsProvider, DatePicker } from '@material-ui/pickers';
+import { photoDateState} from '../../recoil/atoms';
+import { useSetRecoilState} from 'recoil';
+import { MuiPickersUtilsProvider, KeyboardDatePicker } from '@material-ui/pickers';
 import { createMuiTheme } from '@material-ui/core';
 import { ThemeProvider } from '@material-ui/styles';
 import DateFnsUtils from '@date-io/date-fns';
@@ -11,9 +11,7 @@ import './date-choice.scss';
 
 export const DateChoice = () => {
   const setPhotoDate = useSetRecoilState(photoDateState);
-  const dateResetter = useRecoilValue(resetDate);
-  const [selectedDate, setSelectedDate] = useState('');
-  const setResetDateValue = useSetRecoilState(resetDate);
+  const [selectedDate, setSelectedDate] = useState(new Date());
   const defaultMaterialTheme = createMuiTheme({
     palette: {
       primary: deepOrange,
@@ -28,40 +26,25 @@ export const DateChoice = () => {
     });
   };
 
-  const labelFormatter = () => {
-    if (selectedDate === '') {
-      return 'Click here...';
-    } else if (selectedDate !== '' && dateResetter.reset === true) {
-      let message = 'Click here...';
-      return message;
-    } else if (selectedDate !== '' && dateResetter.reset === false) {
-      return selectedDate.toLocaleString('en-US', {
-        day: 'numeric',
-        year: 'numeric',
-        month: 'long',
-      });
-    }
-    setResetDateValue({
-      reset: false,
-    });
-  };
-
   return (
-    <ThemeProvider theme={defaultMaterialTheme}>
-      <MuiPickersUtilsProvider utils={DateFnsUtils}>
-        <DatePicker
-          margin="normal"
-          id="date-picker-dialog"
-          labelFunc={labelFormatter}
-          disableFuture={true}
-          invalidDateMessage=""
-          minDate={new Date('2015-11-30')}
-          format="MM/dd/yyyy"
-          value={selectedDate}
-          onChange={handleDateChange}
-          clearable
-        />
-      </MuiPickersUtilsProvider>
-    </ThemeProvider>
+    <div>
+      <ThemeProvider theme={defaultMaterialTheme}>
+        <MuiPickersUtilsProvider utils={DateFnsUtils}>
+          <KeyboardDatePicker
+            margin="normal"
+            id="date-picker-dialog"
+            cancelLabel
+            disableFuture={true}
+            invalidDateMessage=""
+            minDate={new Date('2015-11-30')}
+            format="MM/dd/yyyy"
+            value={selectedDate}
+            onChange={handleDateChange}
+            clearable
+            todayLabel
+          />
+        </MuiPickersUtilsProvider>
+      </ThemeProvider>
+    </div>
   );
 };

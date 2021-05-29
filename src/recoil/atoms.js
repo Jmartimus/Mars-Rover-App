@@ -20,10 +20,3 @@ export const loading = atom({
     loading: false,
   },
 });
-
-export const resetDate = atom({
-  key: 'resetDate',
-  default: {
-    reset: false,
-  },
-});

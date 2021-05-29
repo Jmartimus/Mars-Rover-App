@@ -1,13 +1,12 @@
 import React from 'react';
 import { useSetRecoilState } from 'recoil';
-import { photo, photoDateState, resetDate } from '../../recoil/atoms';
+import { photo, photoDateState} from '../../recoil/atoms';
 import Button from '@material-ui/core/Button';
 import './reset.scss';
 
 export const Reset = () => {
   const setResetPhotos = useSetRecoilState(photo);
   const setResetDate = useSetRecoilState(photoDateState);
-  const setResetDateValue = useSetRecoilState(resetDate);
 
   const resetApp = () => {
     setResetPhotos({
@@ -15,9 +14,6 @@ export const Reset = () => {
     });
     setResetDate({
       chosenDate: '',
-    });
-    setResetDateValue({
-      reset: true,
     });
   };
   return (

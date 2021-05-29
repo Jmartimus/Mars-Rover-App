@@ -17,5 +17,4 @@ function App() {
 export default App;
 
 //add a spinner on load
-//fix reset button bug that doesn't allow the date to appear after button is pressed.
 //landscape mode :)

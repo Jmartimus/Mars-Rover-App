@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { photo } from '../../recoil/atoms';
 import { useRecoilValue } from 'recoil';
 import Pagination from '@material-ui/lab/Pagination';
@@ -19,6 +19,10 @@ export const ImageRender = () => {
   const picsPerPage = 16;
   const pageCount = photoVar ? Math.ceil(photoVar.length / picsPerPage) : '';
 
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [marsPhoto]);
+
   const noPics = () => {
     if (photoVar) {
       if (photoVar.length === 0) {
@@ -34,7 +38,6 @@ export const ImageRender = () => {
   const changePage = (event, value) => {
     setCurrentPage(value);
   };
-  // alert('AFTER RESET BUTTON, DATE DOESN"t SHOW ANYMORE, ALSO WORK ON CSS')
   return (
     <div id="imgOutputContainer">
       {!photoVar ? (
